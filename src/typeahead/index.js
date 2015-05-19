@@ -22,6 +22,7 @@ var Typeahead = React.createClass({
     options: React.PropTypes.array,
     allowCustomValues: React.PropTypes.number,
     defaultValue: React.PropTypes.string,
+    defaultSelected: React.PropTypes.string,
     placeholder: React.PropTypes.string,
     inputProps: React.PropTypes.object,
     onOptionSelected: React.PropTypes.func,
@@ -35,6 +36,7 @@ var Typeahead = React.createClass({
       customClasses: {},
       allowCustomValues: 0,
       defaultValue: "",
+      defaultSelected: null,
       placeholder: "",
       inputProps: {},
       onOptionSelected: function(option) {},
@@ -52,7 +54,7 @@ var Typeahead = React.createClass({
       entryValue: this.props.defaultValue,
 
       // A valid typeahead value
-      selection: null
+      selection: this.props.defaultSelected
     };
   },
 
