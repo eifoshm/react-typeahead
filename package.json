@@ -1,0 +1,97 @@
+{
+  "name": "react-typeahead",
+  "version": "1.0.5",
+  "description": "React-based typeahead and typeahead-tokenizer",
+  "keywords": [
+    "react",
+    "typeahead",
+    "tokenizer",
+    "autocomplete",
+    "react-component"
+  ],
+  "homepage": "https://github.com/fmoo/react-typeahead",
+  "bugs": {
+    "url": "https://github.com/fmoo/react-typeahead/issues",
+    "email": "ruibalp@gmail.com"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "Peter Ruibal",
+    "email": "ruibalp@gmail.com",
+    "url": "https://github.com/fmoo"
+  },
+  "contributors": [
+    {
+      "name": "Sam Breed",
+      "email": "sam@quickleft.com",
+      "url": "http://wookiehangover.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmoo/react-typeahead.git"
+  },
+  "dependencies": {
+    "classnames": "^1.2.0",
+    "fuzzy": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": ">= 0.13.0"
+  },
+  "main": "lib/react-typeahead.js",
+  "devDependencies": {
+    "browserify": "^8.0.2",
+    "chai": "^1.9.1",
+    "es5-shim": "^4.0.1",
+    "gulp": "^3.8.7",
+    "gulp-mocha-phantomjs": "^0.4.0",
+    "gulp-react": "^3.0.1",
+    "literalify": "^0.4.0",
+    "lodash": "^2.4.1",
+    "mocha": "^1.21.4",
+    "react-tools": "^0.13.0",
+    "reactify": "^1.0.0",
+    "sinon": "^1.10.3",
+    "watchify": "^2.2.1"
+  },
+  "scripts": {
+    "test": "npm run build-test && gulp test",
+    "watchify-test": "watchify test/main.js -o test/bundle.js -v",
+    "build-test": "browserify test/main.js -o test/bundle.js",
+    "build": "browserify ./src/react-typeahead.js -t reactify -t literalify -x react -x 'react/addons' -s ReactTypeahead -o ./dist/react-typeahead.js",
+    "watchify": "watchify ./src/react-typeahead.js -t reactify -t literalify -x react -x 'react/addons' -s ReactTypeahead -o ./dist/react-typeahead.js",
+    "lib": "gulp build",
+    "prepublish": "npm run lib"
+  },
+  "literalify": {
+    "react": "window.React || require('react')",
+    "react/addons": "window.React || require('react/addons')"
+  },
+  "gitHead": "a9f71c5ffe5f152ad1dc885d490621408300cff1",
+  "_id": "react-typeahead@1.0.5",
+  "_shasum": "a5d8bd4df4e86030b4620d45fd951cf63ad2a4ae",
+  "_from": "react-typeahead@",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "fmoo",
+    "email": "ruibalp@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "fmoo",
+      "email": "ruibalp@gmail.com"
+    },
+    {
+      "name": "wookiehangover",
+      "email": "samuel.breed@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "a5d8bd4df4e86030b4620d45fd951cf63ad2a4ae",
+    "tarball": "http://registry.npmjs.org/react-typeahead/-/react-typeahead-1.0.5.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/react-typeahead/-/react-typeahead-1.0.5.tgz",
+  "readme": "ERROR: No README data found!"
+}
